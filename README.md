@@ -1,0 +1,1 @@
+Minimal example of Dockerized Angular + Spring Boot application.

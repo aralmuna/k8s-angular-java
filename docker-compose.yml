@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  frontend:
+    build: ./angular
+    image: demo/angular:v1
+    ports:
+      - 80:80
+    depends_on:
+      - backend
+    environment:
+      - NGINX_HOST=frontend
+      - API_HOST=backend
+      - API_PORT=8080
+  backend:
+    build: ./java
+    image: demo/java:v1
+    ports:
+      - 8080:8080
