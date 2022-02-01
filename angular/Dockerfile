@@ -33,5 +33,6 @@ EXPOSE 80
 
 # https://serverfault.com/a/919212/38612
 COPY docker-entrypoint.sh /
+RUN chmod +x /docker-entrypoint.sh
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["nginx", "-g", "daemon off;"]
